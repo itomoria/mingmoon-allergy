@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.search-container {
+    margin: 20px 0;
+}
+
+#searchInput {
+    width: calc(100% - 2px); /* Reduced by 2px */
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.allergy-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.allergy-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.not-found {
+    color: #dc3545;
+    padding: 20px;
+    text-align: center;
+}
+
+.allergy-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px; /* Directly control the space between */
+    padding: 6px 0;
+    position: relative;
+}
+
+.allergy-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px dotted #ddd;
+}
+
+.allergy-item span:first-child {
+    padding-right: 10px;
+    background: white;
+    position: relative;
+    z-index: 1;
+}
+
+.allergy-item span:last-child {
+    background: white;
+    position: relative;
+    z-index: 1;
+}
